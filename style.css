@@ -187,7 +187,7 @@ p {
 }
 
 .logo {
-    max-height: 72px;  /* Bigger logo while keeping header size fixed */
+    max-height: 120px;  /* Bigger logo while keeping header size fixed */
     height: auto;
     width: auto;
     filter: drop-shadow(0 8px 20px rgba(0,0,0,0.12));
