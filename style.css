@@ -190,7 +190,7 @@ p {
 
 .logo {
     /* ↓ bigger logo, but it fits into the bar because we reduced padding */
-    height: 64px;
+    height: 84px;
     width: auto;
     filter: drop-shadow(0 8px 20px rgba(0,0,0,0.12));
 }
