@@ -186,7 +186,7 @@ p {
     align-items: center;
     gap: 12px;
 
-    height: 90px;     /* ← FINAL visible logo height */
+    height: 70px;     /* ← FINAL visible logo height */
 }
 
 
@@ -194,7 +194,7 @@ p {
 .logo {
     height: 100%;     /* ← fills the container perfectly */
     width: auto;
-    max-height: 60px; /* ← prevents header from expanding */
+    max-height: 70px; /* ← prevents header from expanding */
     display: block;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
@@ -204,7 +204,7 @@ p {
     font-weight: 800;
     font-size: 1.35rem;
     letter-spacing: 0.08em;
-    color: var(--color-text-dark);
+    color: var(#6b7280);
     text-shadow: none;
 }
 
