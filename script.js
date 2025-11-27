@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
+            header.style.backgroundColor = 'rgba(243, 244, 246, 0.98)';
             header.style.padding = '0.5rem 0';
             header.style.transition = '0.3s';
         } else {
-            header.style.backgroundColor = 'rgba(15, 23, 42, 0.9)';
+            header.style.backgroundColor = 'rgba(249, 250, 251, 0.96)';
             header.style.padding = '1rem 0';
         }
     });

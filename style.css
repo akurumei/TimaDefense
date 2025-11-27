@@ -1,15 +1,15 @@
 /* --- Variables & Reset --- */
 :root {
-    --color-bg-dark: #0b1120;    /* Deep slate */
-    --color-bg-medium: #111827;  /* Lighter slate */
-    --color-bg-light: #f8fafc;   /* Off white */
+    --color-bg-dark: #f5f5f5;    /* Light chrome base */
+    --color-bg-medium: #e5e7eb;  /* Slightly darker panel */
+    --color-bg-light: #f9fafb;   /* Off white */
     
-    --color-primary: #c5c5c5;    /* New primary (metallic gray) */
+    --color-primary: #c5c5c5;    /* Primary metallic gray */
     --color-primary-dark: #a3a3a3;
     
-    --color-text-main: #f1f5f9;
-    --color-text-muted: #94a3b8;
-    --color-text-dark: #1e293b;
+    --color-text-main: #111827;
+    --color-text-muted: #6b7280;
+    --color-text-dark: #020617;
 
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
@@ -33,16 +33,16 @@ html {
 
 body {
     font-family: var(--font-main);
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-bg-light);
     color: var(--color-text-main);
     line-height: 1.6;
     overflow-x: hidden;
 
-    /* subtle global depth */
+    /* subtle global depth – light brushed steel */
     background-image:
-        radial-gradient(circle at 20% 0%, rgba(197,197,197,0.08) 0, transparent 60%),
-        radial-gradient(circle at 80% 100%, rgba(148,163,184,0.1) 0, transparent 55%),
-        linear-gradient(180deg, #020617 0%, #020617 40%, #020617 100%);
+        radial-gradient(circle at 20% 0%, rgba(209,213,219,0.45) 0, transparent 60%),
+        radial-gradient(circle at 80% 100%, rgba(156,163,175,0.35) 0, transparent 55%),
+        linear-gradient(180deg, #f9fafb 0%, #e5e7eb 40%, #f3f4f6 100%);
 }
 
 /* metallic micro-stripe helper (for certain blocks) */
@@ -121,7 +121,7 @@ p {
     color: #020617;
     border: 1px solid rgba(255,255,255,0.25);
     box-shadow:
-        0 10px 25px rgba(15,23,42,0.6),
+        0 10px 25px rgba(15,23,42,0.1),
         inset 0 1px 0 rgba(255,255,255,0.5);
 }
 
@@ -142,7 +142,7 @@ p {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow:
-        0 14px 30px rgba(15,23,42,0.75),
+        0 14px 30px rgba(15,23,42,0.18),
         inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
@@ -157,7 +157,7 @@ p {
 .btn-small:hover {
     background-image: linear-gradient(135deg, #e5e5e5, #b0b0b0);
     color: #020617;
-    box-shadow: 0 6px 18px rgba(15,23,42,0.7);
+    box-shadow: 0 6px 18px rgba(15,23,42,0.2);
 }
 
 /* --- Header --- */
@@ -166,11 +166,11 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(180deg, rgba(15,23,42,0.98), rgba(15,23,42,0.9));
+    background-image: linear-gradient(180deg, rgba(249,250,251,0.96), rgba(243,244,246,0.94));
     backdrop-filter: blur(14px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(148,163,184,0.35);
-    box-shadow: 0 12px 35px rgba(15,23,42,0.8);
+    border-bottom: 1px solid rgba(209,213,219,0.9);
+    box-shadow: 0 10px 28px rgba(15,23,42,0.08);
     padding: 1rem 0;
 }
 
@@ -189,15 +189,15 @@ p {
 .logo {
     height: 96px;
     width: auto;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.65));
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.12));
 }
 
 .logo-text {
     font-weight: 800;
     font-size: 1.35rem;
     letter-spacing: 0.08em;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    color: var(--color-text-dark);
+    text-shadow: none;
 }
 
 .nav-menu ul {
@@ -246,7 +246,7 @@ p {
     display: block;
     width: 25px;
     height: 2px;
-    background-color: white;
+    background-color: #111827;
     transition: 0.3s;
 }
 
@@ -258,18 +258,18 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color: var(--color-bg-dark);
-    /* Metallic grid + glow */
+    background-color: var(--color-bg-light);
+    /* Light chrome grid */
     background-image: 
-        radial-gradient(circle at 10% 0%, rgba(197,197,197,0.16) 0, transparent 55%),
-        radial-gradient(circle at 80% 90%, rgba(148,163,184,0.18) 0, transparent 55%),
-        linear-gradient(135deg, #020617 0%, #020617 40%, #020617 100%),
+        radial-gradient(circle at 10% 0%, rgba(209,213,219,0.6) 0, transparent 55%),
+        radial-gradient(circle at 80% 90%, rgba(156,163,175,0.55) 0, transparent 55%),
+        linear-gradient(135deg, #f9fafb 0%, #e5e7eb 40%, #f3f4f6 100%),
         repeating-linear-gradient(
             45deg,
-            rgba(255,255,255,0.03) 0,
-            rgba(255,255,255,0.03) 1px,
-            transparent 1px,
-            transparent 16px
+            rgba(255,255,255,0.25) 0,
+            rgba(255,255,255,0.25) 1px,
+            rgba(229,231,235,0.55) 1px,
+            rgba(229,231,235,0.55) 16px
         );
     background-size: cover, cover, cover, 20px 20px;
     text-align: center;
@@ -282,10 +282,10 @@ p {
     max-width: 800px;
     padding: 2.5rem 2rem;
     border-radius: 18px;
-    background: radial-gradient(circle at 50% 0, rgba(15,23,42,0.9), rgba(15,23,42,0.96));
+    background: radial-gradient(circle at 50% 0, rgba(255,255,255,0.98), rgba(243,244,246,0.98));
     box-shadow:
-        0 28px 70px rgba(15,23,42,0.95),
-        0 0 0 1px rgba(148,163,184,0.25);
+        0 24px 60px rgba(15,23,42,0.16),
+        0 0 0 1px rgba(209,213,219,0.9);
 }
 
 .subtitle {
@@ -308,10 +308,10 @@ p {
 }
 
 .bg-dark { 
-    background-image: radial-gradient(circle at 0 0, #020617 0, #020617 45%, #020617 100%);
+    background-image: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 40%, #e5e7eb 100%);
 }
 .bg-medium { 
-    background-image: linear-gradient(135deg, #020617 0%, #020617 15%, #020617 50%, #020617 100%);
+    background-image: linear-gradient(180deg, #f9fafb 0%, #e5e7eb 40%, #e5e7eb 100%);
 }
 .bg-blue { 
     /* premium metallic strip section */
@@ -327,7 +327,7 @@ p {
 
 /* FIX: headline contrast on grey background */
 .bg-blue h2 {
-    color: #0b1120;
+    color: #111827;
     text-shadow: none;
 }
 
@@ -339,13 +339,13 @@ p {
 }
 
 .tima-card {
-    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.08), rgba(15,23,42,0.98));
-    border: 1px solid rgba(148,163,184,0.3);
+    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.95), rgba(243,244,246,0.98));
+    border: 1px solid rgba(209,213,219,0.9);
     padding: 2rem;
     border-radius: 14px;
     box-shadow:
-        0 18px 40px rgba(15,23,42,0.85),
-        0 0 0 1px rgba(15,23,42,1);
+        0 18px 40px rgba(15,23,42,0.12),
+        0 0 0 1px rgba(255,255,255,0.8);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -353,8 +353,8 @@ p {
     transform: translateY(-6px);
     border-color: rgba(229,231,235,0.9);
     box-shadow:
-        0 24px 60px rgba(15,23,42,0.95),
-        0 0 0 1px rgba(255,255,255,0.08);
+        0 24px 60px rgba(15,23,42,0.18),
+        0 0 0 1px rgba(255,255,255,0.9);
 }
 
 .letter {
@@ -365,12 +365,12 @@ p {
     line-height: 1;
     text-shadow:
         0 1px 0 rgba(255,255,255,0.4),
-        0 4px 10px rgba(0,0,0,0.9);
+        0 4px 10px rgba(0,0,0,0.1);
 }
 
 .tima-card h3 {
     font-size: 1.5rem;
-    color: white;
+    color: var(--color-text-dark);
 }
 
 /* --- Split Layout (Mission/Vision) --- */
@@ -407,9 +407,9 @@ p {
     align-items: flex-start;
     padding: 1.75rem;
     border-radius: 14px;
-    background: radial-gradient(circle at 0 0, rgba(148,163,184,0.08), rgba(15,23,42,0.98));
-    border: 1px solid rgba(148,163,184,0.3);
-    box-shadow: 0 16px 40px rgba(15,23,42,0.9);
+    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.96), rgba(243,244,246,0.98));
+    border: 1px solid rgba(209,213,219,0.9);
+    box-shadow: 0 16px 40px rgba(15,23,42,0.12);
 }
 
 /* FIX: remove meaningless circles */
@@ -429,22 +429,22 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background: linear-gradient(120deg, rgba(15,23,42,0.95), rgba(15,23,42,0.9));
+    background: linear-gradient(120deg, rgba(249,250,251,0.98), rgba(229,231,235,0.98));
     border-left: 3px solid transparent;
     border-radius: 12px;
-    box-shadow: 0 10px 28px rgba(15,23,42,0.9);
+    box-shadow: 0 10px 28px rgba(15,23,42,0.08);
     transition: 0.3s;
 }
 
 .feature-row:hover {
     border-left-color: var(--color-primary);
-    background: linear-gradient(120deg, rgba(30,41,59,0.98), rgba(15,23,42,1));
+    background: linear-gradient(120deg, rgba(243,244,246,1), rgba(209,213,219,1));
 }
 
 .feature-title {
     font-weight: 700;
     font-size: 1.2rem;
-    color: white;
+    color: var(--color-text-dark);
     width: 30%;
 }
 
@@ -471,14 +471,14 @@ p {
 }
 
 .service-card {
-    background: radial-gradient(circle at 0 0, rgba(148,163,184,0.12), rgba(15,23,42,0.98));
+    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.98), rgba(243,244,246,0.98));
     padding: 2rem;
     border-radius: 16px;
     border-top: 3px solid var(--color-primary);
-    border-inline: 1px solid rgba(148,163,184,0.4);
+    border-inline: 1px solid rgba(209,213,219,0.9);
     box-shadow:
-        0 18px 45px rgba(15,23,42,0.95),
-        0 0 0 1px rgba(15,23,42,1);
+        0 18px 45px rgba(15,23,42,0.12),
+        0 0 0 1px rgba(255,255,255,0.9);
 }
 
 .service-card h3 {
@@ -504,8 +504,8 @@ p {
 
 .highlight-card {
     background-image:
-        linear-gradient(135deg, rgba(197,197,197,0.06), rgba(37,46,67,1)),
-        radial-gradient(circle at 0 0, rgba(255,255,255,0.12), transparent 60%);
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(229,231,235,1)),
+        radial-gradient(circle at 0 0, rgba(255,255,255,0.6), transparent 60%);
 }
 
 /* --- Differentiators (Blue / Metallic Section) --- */
@@ -528,7 +528,7 @@ p {
             rgba(200,200,200,0.15) 4px
         );
     box-shadow:
-        0 14px 35px rgba(15,23,42,0.7),
+        0 14px 35px rgba(15,23,42,0.15),
         inset 0 1px 0 rgba(255,255,255,0.9);
     border: 1px solid rgba(148,163,184,0.7);
 }
@@ -567,30 +567,30 @@ p {
 .step-number {
     font-size: 3.5rem;
     font-weight: 900;
-    color: rgba(255,255,255,0.15);
+    color: rgba(148,163,184,0.8);
     line-height: 1;
     margin-bottom: 0.25rem;
     z-index: 0;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.65);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .step-text {
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text-dark);
     z-index: 1;
-    background: linear-gradient(135deg, #020617, #020617);
+    background: linear-gradient(135deg, #f9fafb, #e5e7eb);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid rgba(148,163,184,0.6);
-    box-shadow: 0 8px 20px rgba(15,23,42,0.9);
+    border: 1px solid rgba(209,213,219,0.9);
+    box-shadow: 0 8px 20px rgba(15,23,42,0.12);
 }
 
 /* --- Footer --- */
 .footer {
-    background-image: linear-gradient(180deg, #020617 0%, #020617 50%, #020617 100%);
+    background-image: linear-gradient(180deg, #e5e7eb 0%, #d4d4d4 50%, #e5e7eb 100%);
     padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(148,163,184,0.4);
-    box-shadow: 0 -14px 40px rgba(0,0,0,0.9);
+    border-top: 1px solid rgba(209,213,219,0.9);
+    box-shadow: 0 -14px 40px rgba(15,23,42,0.15);
 }
 
 .footer-cta {
@@ -609,18 +609,18 @@ p {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.12), rgba(15,23,42,0.95));
+    background: radial-gradient(circle at 0 0, rgba(255,255,255,0.98), rgba(243,244,246,0.98));
     padding: 0.8rem 1.5rem;
     border-radius: 999px;
     transition: 0.3s;
-    border: 1px solid rgba(148,163,184,0.5);
-    box-shadow: 0 10px 26px rgba(15,23,42,0.9);
+    border: 1px solid rgba(209,213,219,0.9);
+    box-shadow: 0 10px 26px rgba(15,23,42,0.12);
 }
 
 .contact-link:hover {
     background-image: linear-gradient(135deg, #e5e5e5, #b8b8b8);
     color: #020617;
-    box-shadow: 0 14px 35px rgba(15,23,42,0.95);
+    box-shadow: 0 14px 35px rgba(15,23,42,0.18);
 }
 
 .footer-bottom {
@@ -677,7 +677,7 @@ p {
         right: -100%;
         width: 80%;
         height: 100vh;
-        background-color: var(--color-bg-dark);
+        background-color: #111827;
         padding-top: 6rem;
         transition: 0.3s;
         box-shadow: -5px 0 15px rgba(0,0,0,0.5);
@@ -695,6 +695,7 @@ p {
 
     .nav-menu a {
         font-size: 1.2rem;
+        color: #f9fafb;
     }
     
     /* Hamburger Animation */
